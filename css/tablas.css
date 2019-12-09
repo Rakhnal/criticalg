@@ -1,0 +1,159 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 02-dic-2019, 13:35:44
+    Author     : adonoso
+*/
+
+input[type=submit] {
+    padding: 10px;
+    font-size: 1em;
+    background-color: white;
+    border: 1px solid #D5AD6D;
+    border-radius: 5px;
+    color: black;
+    transition: all 0.3s ease;
+}
+
+input[type=submit]:hover {
+    border-color: #e3e4e5;
+}
+
+table input[type=text] {
+    text-align: center;
+    width: 100%;
+    border: 1px solid #D5AD6D;
+    transition: all 0.3s ease;
+}
+
+table input[type=email] {
+    text-align: center;
+    border: none;
+    font-weight: bold;
+    width: 100%;
+}
+
+table input[type=text]:hover {
+    border-color: #e3e4e5;
+}
+
+input[type=search] {
+    border: 1px solid #D5AD6D !important;
+    transition: all 0.3s ease;
+}
+
+input[type=search]:hover {
+    border-color: #e3e4e5 !important;
+}
+
+table {
+    background-color: white;
+}
+
+td, th {
+    text-align: center;
+    vertical-align: middle !important;
+}
+
+td .btn-info {
+    padding: 10px;
+    font-size: 1em;
+    background-color: white;
+    border: 1px solid #D5AD6D;
+    border-radius: 5px;
+    color: black;
+    transition: all 0.3s ease;
+    margin-right: 20px;
+}
+
+td .btn-info:hover {
+    background-color: white;
+    border-color: #e3e4e5;
+    border-width: 1px;
+    color: black;
+}
+
+td .btn-info:focus {
+    background-color: white;
+    border-color: #e3e4e5;
+    border-width: 1px;
+    color: black;
+}
+
+table.dataTable tbody tr.selected {
+    background-color: #ffffff;
+}
+
+#validateTable_wrapper {
+    margin: 3% !important;
+}
+
+#carouselIndicators {
+    height: auto;
+    width: 70%;
+}
+
+#modalJuego textarea {
+    text-align: justify;
+    margin-top: 30px;
+}
+
+#carouselIndicators img {
+    height: 100%;
+}
+
+#desModal {
+    border: none !important;
+}
+
+#mainModal p {
+    margin-bottom: 0px;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+#idValForm input[type=radio] {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#idValForm input[type=submit] {
+    margin-top: 10px;
+    margin-left: 20px;
+    transition: all 0.3s ease;
+}
+
+#contenedor-filtro a{
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 5px 15px;
+    border: 1px solid #D5AD6D;
+    background-color: white;
+    color: #D5AD6D;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+#contenedor-filtro a:hover{
+    text-decoration: none;
+    background-color: #e3e4e5;
+    border-color: #D5AD6D;
+    color: #D5AD6D;
+}
+
+.paginate_button {
+    background: transparent !important;
+    border: 1px solid #D5AD6D !important;
+    transition: all 0.3s ease;
+}
+
+.paginate_button:hover {
+    border-color: #e3e4e5 !important;
+}
+
+.margin {
+    margin-left: 35px !important;
+}

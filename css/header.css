@@ -1,0 +1,156 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 26-nov-2019, 13:13:12
+    Author     : adonoso
+*/
+
+#header {
+    width: 100%;
+    width: -webkit-fill-available;
+    position: fixed;
+    min-height: 90px;
+    box-shadow: 0px 24px 3px -24px #D5AD6D;
+    transition: all 0.3s ease;
+
+    z-index: 10;
+}
+
+#logo {
+    width: 120px;
+    margin-right: 50px;
+    margin-left: 50px;
+    transition: all 0.3s ease;
+}
+
+h6 {
+    margin: 0px;
+    padding: 0px;
+}
+
+.navbar {
+    background-color: white;
+    width: 100%;
+}
+
+ul {
+    margin-right: 0px !important;
+}
+
+.modal textarea {
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+#header p {
+    white-space: nowrap;
+    margin: 0px;
+    text-align: justify;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+#header a:hover {
+    color: #D5AD6D;
+    background: -webkit-linear-gradient(top, #8f6B29, #FDE08D, #DF9F28);
+    background: linear-gradient(top, #8f6B29, #FDE08D, #DF9F28);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#header .btn-info, #header input[type=submit] {
+    padding: 10px;
+    font-size: 1em;
+    background-color: white;
+    border: 1px solid #D5AD6D;
+    border-radius: 5px;
+    color: black;
+    transition: all 0.3s ease;
+    margin-right: 20px;
+}
+
+#header .btn-info:hover, #header input[type=submit]:hover {
+    background-color: white;
+    border-color: #e3e4e5;
+    border-width: 1px;
+    color: black;
+}
+
+.modal .modal-body input[type=submit] {
+    background: transparent;
+    border-color: #D5AD6D;
+    justify-self: center;
+    width: 20%;
+    min-height: 40px;
+    margin-top: 5%;
+    border-radius: 15px;
+    border-width: 1px;
+    transition: all 0.1s ease;
+    outline:none;
+}
+
+.modal-body input[type=submit]:hover {
+    border-color: #e3e4e5;
+}
+
+.navbar-toggler {
+    margin-left: 20px;
+}
+
+.dropdown-menu {
+    border: 1px solid #D5AD6D;
+}
+
+.custom-toggler.navbar-toggler {
+    height: 60px;
+    width: 60px;
+    font-size: 1.5em;
+    border-color: #D5AD6D;
+}
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(213,173,109, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+/*Estilos para los formularios*/
+
+.modal form .label-name {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0%;
+    pointer-events: none;
+    color: #bababa;
+}
+
+.modal .content-name {
+    position: absolute;
+    bottom: 5px;
+    left: 0px;
+    transition: all 0.3s ease;
+}
+
+.modal .name-form {
+    width: 85%;
+    position: relative;
+    margin: 5% 0% 0% 0%;
+}
+
+.modal input:focus + .label-name .content-name,
+.modal input:valid + .label-name .content-name{
+    transform: translateY(-20px);
+    font-size: 14px;
+    color: black;
+}
+
+.modal input[type=text], .modal input[type=password], .modal input[type=email] {
+    width: 100%;
+    height: 100%;
+    padding-top: 20px;
+    border: none;
+    border-bottom: 1px solid black;
+    transition: all 0.3s ease;
+    outline: none;
+}
