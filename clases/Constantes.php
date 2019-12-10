@@ -21,6 +21,8 @@ class Constantes {
     const PLATAFORMA = "plataforma";
     const PLATAFORMAS = "plataformas";
     const JUEGO = "juego";
+    const VALORADOS = "valorados";
+    const NOTICIA = "noticia";
     
     // Datos de BBDD
     const IP = "localhost";

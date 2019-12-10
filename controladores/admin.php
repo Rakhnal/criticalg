@@ -151,4 +151,18 @@ if (isset($_REQUEST['valGame'])) {
     header("Location: ../vistas/areaJuegos/" . Constantes::VALIDATE);
 }
 
+// ---- Ventana Modal de las Noticias
+if (isset($_REQUEST['notice'])) {
+    
+    $correo = $user->getCorreo();
+    
+    $titular = $_REQUEST['titulo'];
+    $cuerpo = $_REQUEST['cuerpo'];
+    
+    conexion::Insertar_Noticia(Constantes::NOTICIA, $titular, $cuerpo, $correo);
+    
+    header("Location: ../vistas/noticias/" . Constantes::NOTICIAS);
+    
+}
+
 conexion::cerrarBBDD();

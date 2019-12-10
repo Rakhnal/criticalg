@@ -26,6 +26,10 @@ and open the template in the editor.
     transition: all 0.3s ease;
 }
 
+#imgPerfil {
+    transition: all 0.3s ease;
+}
+
 h6 {
     margin: 0px;
     padding: 0px;

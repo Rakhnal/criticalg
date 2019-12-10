@@ -23,6 +23,7 @@ and open the template in the editor.
         <link rel="stylesheet" href="../../css/general.css">
         <link rel="stylesheet" href="../../css/tablas.css">
         <script src="../../scripts/headerscroll.js"></script>
+        <script src="../../scripts/addJuego.js"></script>
     </head>
     <body>
         <?php

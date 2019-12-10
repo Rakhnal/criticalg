@@ -19,7 +19,7 @@ $(function () {
                 var datos = JSON.parse(respuesta);
                 if (datos !== null) {
                     
-                    $("#idJuego").html(datos[0].IDJUEGO);
+                    $("#idJuego").val(datos[0].IDJUEGO);
                     
                     $("#tituloModal").html(datos[0].NOMJUEGO);
                     $("#desModal").html(datos[0].DESJUEGO);

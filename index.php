@@ -17,6 +17,7 @@ and open the template in the editor.
         <script src="files/jquery-3.4.1.min.js"></script>
         <script src="files/bootstrap-4.3.1-dist/js/bootstrap.js"></script>
         <script src="scripts/headerscroll.js"></script>
+        <script src="scripts/addJuego.js"></script>
     </head>
     <body>
         <?php

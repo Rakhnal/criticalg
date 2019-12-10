@@ -22,6 +22,7 @@ and open the template in the editor.
         <link rel="stylesheet" href="../../css/general.css">
         <link rel="stylesheet" href="../../css/tablas.css">
         <script src="../../scripts/headerscroll.js"></script>
+        <script src="../../scripts/addJuego.js"></script>
     </head>
     <body>
         <?php
@@ -35,11 +36,6 @@ and open the template in the editor.
         session_start();
         conexion::abrirBBDD();
 
-        if (isset($_GET['yaValorado'])) {
-            ?>
-            <script>$('#yavalorado').modal('show');</script>
-            <?php
-        }
 
         if (isset($_GET['mode'])) {
             $mode = $_GET['mode'];
@@ -275,6 +271,18 @@ and open the template in the editor.
 
         <?php
         include '../auxiliares/footer.php';
+
+        if (isset($_GET['yaValorado'])) {
+            ?>
+            <script>$('#yavalorado').modal('show');</script>
+            <?php
+        }
+
+        if (isset($_GET['rated'])) {
+            ?>
+            <script>$('#rated').modal('show');</script>
+            <?php
+        }
 
         conexion::cerrarBBDD();
         ?>

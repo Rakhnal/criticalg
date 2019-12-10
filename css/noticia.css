@@ -26,3 +26,15 @@ and open the template in the editor.
 #newArticle:hover {
     transform: scale(1.05);
 }
+
+.noticiaDiv {
+    min-height: 300px;
+    padding: 2%;
+    margin-left: 10px;
+    background: rgba(255,255,255, 0.7);
+    border: 1px solid #D5AD6D;
+}
+
+.noticiaDiv:hover {
+    border: 1px solid #e3e4e5;
+}

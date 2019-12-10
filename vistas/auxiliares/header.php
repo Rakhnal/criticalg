@@ -69,57 +69,67 @@ if (isset($_SESSION['userObj'])) {
                     ?>
                 </li>
 
-                <li class="nav-item dropdown">
+                <?php
+                if ($_SESSION['location'] == Constantes::LISTANOMBRE || $_SESSION['location'] == Constantes::LISTAPLATAFORMA || $_SESSION['location'] == Constantes::LISTAGENERO) {
+                    ?>
+                    <li class="nav-item dropdown active">
+                        <?php
+                    } else {
+                        ?>
+                    <li class="nav-item dropdown">
+                        <?php
+                    }
+                    ?>
                     <a class="nav-link dropdown-toggle" href="#" id="ddListar" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Listar Juegos
                     </a>
                     <div class="dropdown-menu" aria-labelledby="ddListar">
-                        
+
                         <?php
                         if ($_SESSION['location'] == Constantes::LISTANOMBRE) {
-                        ?>
+                            ?>
                             <a class="dropdown-item" href="#">Por Nombre</a>
-                        <?php
+                            <?php
                         } else if ($_SESSION['location'] == Constantes::INDEX) {
-                        ?>
+                            ?>
                             <a class="dropdown-item" href="vistas/listaJuegos/listaJuegos.php?mode=nombre">Por Nombre</a>
-                        <?php
+                            <?php
                         } else {
-                        ?>
+                            ?>
                             <a class="dropdown-item" href="../listaJuegos/listaJuegos.php?mode=nombre">Por Nombre</a>
-                        <?php
+                            <?php
                         }
                         ?>
-                            
+
                         <?php
                         if ($_SESSION['location'] == Constantes::LISTAPLATAFORMA) {
-                        ?>
+                            ?>
                             <a class="dropdown-item" href="#">Por Plataforma</a>
-                        <?php
+                            <?php
                         } else if ($_SESSION['location'] == Constantes::INDEX) {
-                        ?>
+                            ?>
                             <a class="dropdown-item" href="vistas/listaJuegos/listaJuegos.php?mode=plataforma">Por Plataforma</a>
-                        <?php
+                            <?php
                         } else {
-                        ?>
+                            ?>
                             <a class="dropdown-item" href="../listaJuegos/listaJuegos.php?mode=plataforma">Por Plataforma</a>
-                        <?php
+                            <?php
                         }
                         ?>
-                            
+
                         <?php
                         if ($_SESSION['location'] == Constantes::LISTAGENERO) {
-                        ?>
+                            ?>
                             <a class="dropdown-item" href="#">Por Género</a>
-                        <?php
+                            <?php
                         } else if ($_SESSION['location'] == Constantes::INDEX) {
-                        ?>
+                            ?>
                             <a class="dropdown-item" href="vistas/listaJuegos/listaJuegos.php?mode=genero">Por Género</a>
-                        <?php
+                            <?php
                         } else {
-                        ?>
+                            ?>
                             <a class="dropdown-item" href="../listaJuegos/listaJuegos.php?mode=genero">Por Género</a>
-                        <?php
+                            <?php
                         }
                         ?>
                     </div>
@@ -204,9 +214,21 @@ if (isset($_SESSION['userObj'])) {
                 <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#login">Iniciar Sesión</button>
                 <?php
             } else {
-                ?>
-                <?php
-                
+
+                if ($_SESSION['location'] == Constantes::INDEX) {
+                    ?>
+                    <a data-toggle="modal" data-target="#perfil">
+                        <img id="imgPerfil" border="0" alt="Imagen Usuario" src="imgs/perfiles/<?php echo $user->getFoto(); ?>" width="120" height="75">
+                    </a>
+                    <?php
+                } else {
+                    ?>
+                    <a data-toggle="modal" data-target="#perfil">
+                        <img id="imgPerfil" border="0" alt="Imagen Usuario"  src="../../imgs/perfiles/<?php echo $user->getFoto(); ?>" width="120" height="75">
+                    </a>
+                    <?php
+                }
+
                 if ($user->getRol() == Constantes::ADMIN) {
                     ?>
                     <?php
@@ -244,4 +266,18 @@ if (isset($_SESSION['userObj'])) {
                     </div>
                     </nav>
                     </div>
+
+                    <?php
+                    if (isset($_GET['yaexiste'])) {
+                        ?>
+                        <script>$('#yaexiste').modal('show');</script>
+                        <?php
+                    }
+
+                    if (isset($_GET['noexiste'])) {
+                        ?>
+                        <script>$('#noexiste').modal('show');</script>
+                        <?php
+                    }
+                    ?>
 

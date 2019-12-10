@@ -43,12 +43,29 @@ class conexion {
         $stmt->execute();
         $result = $stmt->get_result();
         while ($fila = $result->fetch_assoc()) {
-            $userEnc = new Usuario($fila["CORREO"], $fila["PASS"], $fila["NOMBRE"], $fila["APELLIDO"], $fila["FOTO"]);
+            $userEnc = new Usuario($fila["CORREO"], $fila["PASSWORD"], $fila["NOMBRE"], $fila["APELLIDO"], $fila["FOTO"]);
         }
 
         return $userEnc;
     }
 
+    // Buscamos el usuario en la BBDD
+    public static function existeUsuarioPass($correo, $pass) {
+
+        $query = "SELECT * FROM usuario WHERE CORREO = ? AND PASSWORD = ?";
+        $stmt = self::$CONEXION->prepare($query);
+
+        $stmt->bind_param("ss", $correo, $pass);
+
+        $stmt->execute();
+        $result = $stmt->get_result();
+        while ($fila = $result->fetch_assoc()) {
+            $userEnc = new Usuario($fila["CORREO"], $fila["PASSWORD"], $fila["NOMBRE"], $fila["APELLIDO"], $fila["FOTO"]);
+        }
+
+        return $userEnc;
+    }
+    
     // Buscamos el rol del usuario
     public static function obtenerUsuarios() {
         $query = "SELECT * FROM usuario";
@@ -330,11 +347,30 @@ class conexion {
 
         return $rol;
     }
+    
+    // Buscamos el rol del usuario
+    public static function obtenerNoticias() {
+        $query = "SELECT * FROM noticia";
+        $stmt = self::$CONEXION->prepare($query);
+
+        $stmt->execute();
+        $result = $stmt->get_result();
+        
+        $i = 0;
+        $noticias = null;
+        while ($fila = $result->fetch_assoc()) {
+            $noticia = new Noticia($fila['IDNOTICIA'], $fila['TITULAR'], $fila['CUERPO'], $fila['CORREO']);
+            $noticias[$i] = $noticia;
+            $i++;
+        }
+
+        return $noticias;
+    }
 
     //----------------------------------------------------------
     public static function haSidoValorado($correo, $idJuego) {
         
-        $sql = "SELECT * FROM valorados WHERE IDJUEGO = " . $idJuego . " AND CORREO = " . $correo;
+        $sql = "SELECT * FROM valorados WHERE IDJUEGO = " . $idJuego . " AND CORREO = '" . $correo . "'";
         $stmt = self::$CONEXION->prepare($sql);
         
         $stmt->execute();
@@ -347,6 +383,29 @@ class conexion {
         }
 
         return $res;
+    }
+    
+    //----------------------------------------------------------
+    public static function recValMedia($idJuego) {
+        
+        $sql = "SELECT AVG(VAL) AS VALMEDIA FROM valorados WHERE IDJUEGO = " . $idJuego;
+        $stmt = self::$CONEXION->prepare($sql);
+        
+        $stmt->execute();
+        $result = $stmt->get_result();
+        
+        $res = 0;
+        
+        while ($fila = $result->fetch_assoc()) {
+            $res = $fila['VALMEDIA'];
+        }
+
+        $queryMedia = "UPDATE juego SET VALMEDIA = ? WHERE IDJUEGO = ?";
+        $stmtMedia = self::$CONEXION->prepare($queryMedia);
+
+        $stmtMedia->bind_param("di", $res, $idJuego);
+
+        $stmtMedia->execute();
     }
 
     //----------------------------------------------------------
@@ -378,6 +437,17 @@ class conexion {
         $stmt = self::$CONEXION->prepare($query);
 
         $stmt->bind_param("ss", $pass, $user);
+
+        $stmt->execute();
+    }
+    
+    //----------------------------------------------------------
+    public static function Modificar_Perfil($tabla, $correo, $foto) {
+
+        $query = "UPDATE " . $tabla . " SET FOTO = ? WHERE CORREO = ?";
+        $stmt = self::$CONEXION->prepare($query);
+
+        $stmt->bind_param("ss", $foto, $correo);
 
         $stmt->execute();
     }
@@ -470,6 +540,30 @@ class conexion {
 
         $stmt->execute();
     }
+    
+    //----------------------------------------------------------
+    public static function Insertar_Noticia($tabla, $titular, $cuerpo, $correo) {
+
+        $query = "INSERT INTO " . $tabla . " VALUES (NULL,?,?,?)";
+
+        $stmt = self::$CONEXION->prepare($query);
+
+        $stmt->bind_param("sss", $titular, $cuerpo, $correo);
+
+        $stmt->execute();
+    }
+    
+    //----------------------------------------------------------
+    public static function Insertar_Valoracion($tabla, $correo, $idJuego, $val) {
+
+        $query = "INSERT INTO " . $tabla . " VALUES (?,?,?)";
+
+        $stmt = self::$CONEXION->prepare($query);
+
+        $stmt->bind_param("sii", $correo, $idJuego, $val);
+
+        $stmt->execute();
+    }
 
     //----------------------------------------------------------
     public static function Borrar_Dato($tabla, $idWhere, $valor) {
@@ -477,7 +571,7 @@ class conexion {
         $query = "DELETE FROM " . $tabla . " WHERE " . $idWhere . " = ?";
         $stmt = self::$CONEXION->prepare($query);
 
-        $stmt->bind_param("s", $valor);
+        $stmt->bind_param("sii", $valor);
 
         $stmt->execute();
     }
