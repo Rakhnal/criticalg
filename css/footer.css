@@ -22,3 +22,18 @@ and open the template in the editor.
 h6 {
     text-align: center !important;
 }
+
+p {
+    text-align: left !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+#aboutusEn {
+    text-decoration: underline !important;
+    transition: all 0.3s ease;
+}
+
+#aboutusEn:hover {
+    color: #D5AD6D;
+}

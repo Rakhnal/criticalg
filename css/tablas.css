@@ -126,6 +126,10 @@ table.dataTable tbody tr.selected {
     transition: all 0.3s ease;
 }
 
+#contenedor-filtro {
+    margin-right: 30px;
+}
+
 #contenedor-filtro a{
     margin-left: 5px;
     margin-right: 5px;

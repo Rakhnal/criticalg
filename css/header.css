@@ -111,7 +111,7 @@ ul {
 .custom-toggler.navbar-toggler {
     height: 60px;
     width: 60px;
-    font-size: 1.5em;
+    font-size: 1em;
     border-color: #D5AD6D;
 }
 .custom-toggler .navbar-toggler-icon {
@@ -157,4 +157,8 @@ ul {
     border-bottom: 1px solid black;
     transition: all 0.3s ease;
     outline: none;
+}
+
+.navbar-collapse {
+    text-align: center;
 }

@@ -45,7 +45,7 @@ and open the template in the editor.
             include 'vistas/auxiliares/header.php';
             ?>
 
-            <div class="row" id="main">
+            <div class="row align-items-center" id="main">
                 <div class="col-md-12 col-lg-6">
                     <div class="row complete justify-content-center align-items-center">
                         <img src="imgs/logo.svg" alt="Logo principal de Critical Games"/>
@@ -53,10 +53,14 @@ and open the template in the editor.
                 </div>
                 <div class="col-md-12 col-lg-6">
                     <div class="row half justify-content-center align-items-center">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a sodales nibh. Quisque fringilla massa vitae faucibus mattis. Donec vitae vehicula turpis, at tristique tortor. Nulla et efficitur dolor. Nulla tincidunt turpis non molestie feugiat. Ut consequat dapibus elit ac fermentum. Aenean iaculis dolor vel turpis finibus, id convallis tortor eleifend. In volutpat nisi urna, ut placerat lectus fermentum vitae. Curabitur egestas eget ipsum ut ornare. Nunc sed orci sed augue elementum vehicula id in sem. Proin facilisis eget nisl at mollis. Donec in mi non mauris dignissim vestibulum vel eget erat.</p>
+                        <h1>¡Bienvenidos a Critical Games!</h1>
                     </div>
                     <div class="row half justify-content-center align-items-center">
-                        <p>Nullam viverra blandit purus, maximus commodo lorem mollis quis. Cras justo libero, bibendum in dignissim ac, pulvinar eu quam. Fusce est nibh, condimentum at molestie a, vulputate id dui. Mauris congue massa tincidunt, mattis ipsum sed, lacinia est. Sed ligula ante, pharetra sagittis nulla sit amet, pharetra pharetra enim. In ac lectus scelerisque, aliquet ante ac, volutpat arcu. Curabitur fermentum eget neque in ornare. Fusce massa nisi, semper in lectus ac, varius mattis tellus. Quisque eleifend faucibus posuere. Curabitur et tincidunt augue, id imperdiet eros. Aliquam aliquet lacus vitae efficitur malesuada. Nullam elementum ac turpis et consequat.</p>
+                        <p>Critical Games es un página dedicada a juegos, no solo a videojuegos, también podrás encontras Juegos de Mesa y de Rol. Basada en una wiki de juegos tienes todas las herramientas necesarias tanto para encontrar nuevos juegos como para agregar (si estás registrado) nuevos juegos que salgan al mercado</p>
+                    </div>
+                    
+                    <div class="row half justify-content-center align-items-center">
+                        <p>El equipo de Critical Games estará encantado de recibir todas las peticiones que hagáis para agregar nuevos juegos, estas peticiones estarán supervisadas por nuestros administradores.</p>
                     </div>
                 </div>
             </div>

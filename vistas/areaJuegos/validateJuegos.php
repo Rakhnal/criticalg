@@ -112,13 +112,15 @@ and open the template in the editor.
 
             </div>
 
+            <?php
+            include '../auxiliares/footer.php';
+            ?>
+            
         </div>
 
         <script src="../../scripts/paginacion.js"></script>
 
         <?php
-        include '../auxiliares/footer.php';
-
         conexion::cerrarBBDD();
         ?>
     </body>

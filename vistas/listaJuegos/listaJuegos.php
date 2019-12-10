@@ -265,13 +265,15 @@ and open the template in the editor.
                 </div>
             </div>
 
+            <?php
+            include '../auxiliares/footer.php';
+            ?>
+
         </div>
 
         <script src="../../scripts/paginacion.js"></script>
 
         <?php
-        include '../auxiliares/footer.php';
-
         if (isset($_GET['yaValorado'])) {
             ?>
             <script>$('#yavalorado').modal('show');</script>

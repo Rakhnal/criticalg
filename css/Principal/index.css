@@ -11,7 +11,7 @@ and open the template in the editor.
 #main img {
     margin-top: 15px;
     margin-bottom: 15px;
-    width: 650px;
+    width: 100%;
 }
 
 p {
@@ -25,5 +25,15 @@ p {
 }
 
 .half {
-    height: 50%;
+    padding-left: 5%;
+    padding-right: 5%;
+    min-height: 20%;
+}
+
+.half p, .half h1 {
+    text-align: justify !important;
+}
+
+h1 {
+    margin-bottom: 40px;
 }

@@ -108,11 +108,13 @@ and open the template in the editor.
 
             </div>
 
+            <?php
+            include '../auxiliares/footer.php';
+            ?>
+
         </div>
 
         <?php
-        include '../auxiliares/footer.php';
-
         conexion::cerrarBBDD();
         ?>
     </body>

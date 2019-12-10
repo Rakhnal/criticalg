@@ -67,7 +67,7 @@ and open the template in the editor.
                                 <p>Desarrollador</p>
                                 <input required type="text" name="developer"/>
                                 <p>Duración (Horas)</p>
-                                <input required type="number" name="duration"/>
+                                <input required type="number" max="999" name="duration"/>
                             </div>
 
                             <div class="col juego-container">
@@ -79,9 +79,9 @@ and open the template in the editor.
                                 <p>Fecha de lanzamiento</p>
                                 <input required type="date" name="launch"/>
                                 <p>Mínimo de jugadores</p>
-                                <input required type="number" name="minPlayers"/>
+                                <input required type="number" max="99" name="minPlayers"/>
                                 <p>Máximo de jugadores</p>
-                                <input required type="number" name="maxPlayers"/>
+                                <input required type="number" max="99" name="maxPlayers"/>
                             </div>
                         </div>
 

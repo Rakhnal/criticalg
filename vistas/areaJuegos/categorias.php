@@ -52,9 +52,9 @@ and open the template in the editor.
             <?php
             include '../auxiliares/header.php';
             ?>
-            
+
             <div class="row justify-content-center" id="main">
-                
+
                 <div class="col" id="generos">
 
                     <h1>Géneros</h1>
@@ -155,11 +155,13 @@ and open the template in the editor.
 
                 </div>
 
+                <?php
+                include '../auxiliares/footer.php';
+                ?>
+
             </div>
 
             <?php
-            include '../auxiliares/footer.php';
-
             conexion::cerrarBBDD();
             ?>
 

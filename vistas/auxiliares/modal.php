@@ -406,7 +406,7 @@
     </div>
 </div>
 
-<!------------- Pantalla modal que da las gracias pro valorar el juego-->
+<!------------- Pantalla modal que da las gracias por valorar el juego-->
 <div id="rated" class="modal fade" role="dialog">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
@@ -418,6 +418,45 @@
 
                 <p>¡Gracias por valorar el juego!</p>
 
+            </div>
+        </div>
+    </div>
+</div>
+
+<!------------- Pantalla modal que da las gracias por valorar el juego-->
+<div id="aboutus" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Sobre nosotros</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="row justify-content-center">
+                    <p>Desarrollo Web: Álvaro Donoso Conde</p>
+                </div>
+                <div class="row justify-content-center">
+                    <p>Lugar: CIFP Virgen de Gracia</p>
+                </div>
+                <div class="row justify-content-center">
+                    <p>Lenguajes utilizados: PHP, Bootstrap y JavaScript</p>
+                </div>
+                <div class="row justify-content-center">
+                    <p>Iconos realizados por <a href="https://www.flaticon.com/authors/gregor-cresnar" title="Gregor Cresnar">Gregor Cresnar</a> en <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></p>
+                </div>
+                <div class="row justify-content-center">
+                    <?php
+                    if ($_SESSION['location'] == Constantes::INDEX) {
+                        ?>
+                        <img alt="Animacion" src="imgs/star.gif"/>
+                        <?php
+                    } else {
+                        ?>
+                        <img alt="Animacion" src="../../imgs/star.gif"/>
+                        <?php
+                    }
+                    ?>
+                </div>
             </div>
         </div>
     </div>
@@ -439,7 +478,7 @@ if (isset($_SESSION['userObj'])) {
                 <div class="modal-body">
 
                     <div class="row">
-                        <div class="col-12 col-md-6">
+                        <div class="col">
 
                             <div class="row">
                                 <?php
@@ -492,9 +531,6 @@ if (isset($_SESSION['userObj'])) {
                                     </form>
                             </div>
 
-                        </div>
-                        <div class="col-12 col-md-6">
-                            
                         </div>
                     </div>
                 </div>
