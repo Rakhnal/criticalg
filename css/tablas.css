@@ -102,7 +102,8 @@ table.dataTable tbody tr.selected {
 }
 
 #carouselIndicators img {
-    height: 100%;
+    max-height: 400px;
+    min-height: 400px;
 }
 
 #desModal {
@@ -160,4 +161,40 @@ table.dataTable tbody tr.selected {
 
 .margin {
     margin-left: 35px !important;
+}
+
+@media
+only screen 
+and (max-device-width: 740px) {
+
+    #carouselIndicators {
+        width: 100%;
+    }
+
+    .modal-dialog {
+        max-width: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .modal-content {
+        height: auto;
+        min-height: 100%;
+        border-radius: 0;
+    }
+    
+    #idValForm input[type=radio] {
+        width: 30px;
+        height: 30px;
+        
+        vertical-align: middle;
+    }
+    
+    #idValForm input[type=submit] {
+        
+        width: 200px !important;
+        
+    }
+
 }

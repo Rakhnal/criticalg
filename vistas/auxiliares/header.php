@@ -258,7 +258,7 @@ if (isset($_SESSION['userObj'])) {
                                 <?php
                             }
                             ?>
-                            <input type="submit" value = "Salir" name = "logout"/>
+                            <input type="submit" class="btnOut" value = "" name = "logout"/>
                         </form>
                         <?php
                     }

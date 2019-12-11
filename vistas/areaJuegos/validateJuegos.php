@@ -99,7 +99,7 @@ and open the template in the editor.
                                 <td><?php echo $juego->getDesarrollador(); ?></td>
                                 <td>
                                     <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#modalJuego">Más Información</button>
-                                    <input type="submit" name="valGame" value="Validar"/>
+                                    <input type="submit" name="valGame" class="btnOk" value=""/>
                                 </td>
                             </form>
                             </tr>

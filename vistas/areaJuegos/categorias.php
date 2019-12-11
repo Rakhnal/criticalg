@@ -82,7 +82,7 @@ and open the template in the editor.
                                         <td class="align-middle"> <textarea readonly maxlength="500" name="desGenero" rows="2" cols="31"><?php echo $genero->getDescripcion(); ?></textarea></td>
 
                                         <td class="align-middle">
-                                            <input type="submit" value = "Borrar" name = "delGen"/>
+                                            <input type="submit" value = "" class="btnDelete" name = "delGen"/>
                                         </td>
                                     </tr>
                                 </form>
@@ -95,7 +95,7 @@ and open the template in the editor.
                                     <td class="align-middle"> <textarea class="editable" maxlength="500" name="desGenero" rows="2" cols="31"></textarea></td>
 
                                     <td class="align-middle">
-                                        <input type="submit" value = "Añadir" name = "instGen"/>
+                                        <input type="submit" value = "" class="btnSave" name = "instGen"/>
                                     </td>
                                 </tr>
                             </form>
@@ -132,7 +132,7 @@ and open the template in the editor.
                                         <td class="align-middle"> <textarea readonly maxlength="500" name="desPlat" rows="2" cols="31"><?php echo $plataforma->getDescripcion(); ?></textarea></td>
 
                                         <td class="align-middle">
-                                            <input type="submit" value = "Borrar" name = "delPlat"/>
+                                            <input type="submit" value = "" class="btnDelete" name = "delPlat"/>
                                         </td>
                                     </tr>
                                 </form>
@@ -145,7 +145,7 @@ and open the template in the editor.
                                     <td class="align-middle"> <textarea class="editable" maxlength="500" name="desPlat" rows="2" cols="31"></textarea></td>
 
                                     <td class="align-middle">
-                                        <input type="submit" value = "Añadir" name = "instPlat"/>
+                                        <input type="submit" value = "" class="btnSave" name = "instPlat"/>
                                     </td>
                                 </tr>
                             </form>

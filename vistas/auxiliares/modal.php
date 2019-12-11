@@ -520,7 +520,7 @@ if (isset($_SESSION['userObj'])) {
                                             }
                                             ?>
                                             <input required type="file" name="imgPerfilModal" id="imgPerfilUser" onchange="cambiarImagen(this)" class="inputfile" />
-                                            <label for="imgPerfilUser">Cambiar Imagen</label>
+                                            <label class="sinPadding" for="imgPerfilUser">Cambiar Imagen</label>
                                         </div>
 
                                         <div class="col">

@@ -94,8 +94,8 @@ and open the template in the editor.
                                         <?php
                                     }
                                     ?>
-                                    <input type="submit" value = "Modificar" name = "modUser"/>
-                                    <input type="submit" value = "Borrar" name = "delUser"/>
+                                    <input type="submit" value = "" class="btnSave" name = "modUser"/>
+                                    <input type="submit" value = "" class="btnDelete" name = "delUser"/>
                                 </td>
                             </tr>
                         </form>

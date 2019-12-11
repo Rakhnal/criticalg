@@ -30,7 +30,7 @@
                 </a>
 
                 <a href="https://twitter.com/">
-                    <img class="socialImg" border="0" alt="Twitter"  src="imgs/iconos/twitter.png" width="60" height="40">
+                    <img class="socialImg" border="0" alt="Twitter"  src="imgs/iconos/twitter.png" width="75" height="40">
                 </a>
 
                 <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
@@ -45,7 +45,7 @@
                 </a>
 
                 <a href="https://twitter.com/">
-                    <img class="socialImg" border="0" alt="Twitter"  src="../../imgs/iconos/twitter.png" width="60" height="40">
+                    <img class="socialImg" border="0" alt="Twitter"  src="../../imgs/iconos/twitter.png" width="75" height="40">
                 </a>
 
                 <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">

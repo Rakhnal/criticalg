@@ -278,11 +278,84 @@ textarea {
     border: 1px solid #e3e4e5;
 }
 
-@media
-only screen 
-and (min-width: 0px) 
-and (max-device-width: 830px) and (orientation: landscape)  {
+.btnOut {
+    border-radius: 0px !important;
+    border: none !important;
+    
+    vertical-align: middle;
+    
+    background-image: url("../imgs/iconos/logout.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+    width: 40px;
+    height: 40px;
+}
 
+.btnOut:hover {
+    transform: scale(1.05);
+}
+
+.btnOk {
+    border-radius: 0px !important;
+    border: none !important;
+    
+    vertical-align: middle;
+    
+    background-image: url("../imgs/iconos/checked.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+    width: 40px;
+    height: 40px;
+}
+
+.btnOk:hover {
+    transform: scale(1.05);
+}
+
+.btnSave {
+    margin-left: 5% !important;
+    
+    vertical-align: middle;
+    
+    border-radius: 0px !important;
+    border: none !important;
+    
+    background-image: url("../imgs/iconos/save.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+    width: 40px;
+    height: 40px;
+}
+
+.btnSave:hover {
+    transform: scale(1.05);
+}
+
+.btnDelete {
+    margin-left: 5%;
+    
+    vertical-align: middle;
+    
+    border-radius: 0px !important;
+    border: none !important;
+    
+    background-image: url("../imgs/iconos/delete.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+    width: 40px;
+    height: 40px;
+}
+
+.btnDelete:hover {
+    transform: scale(1.05);
+}
+
+.sinPadding {
+    padding: 0 !important;
 }
 
 @media
@@ -291,6 +364,11 @@ and (max-device-width: 740px) {
 
     * {
         font-size: 1.1em;
+    }
+
+    .inputfile + label {
+        padding-top: 5%;
+        font-size: 0.4em;
     }
 
 }
